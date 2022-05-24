@@ -1,0 +1,122 @@
+:root {
+  --color-white: #f9f9f9;
+  --color-gray-100: #dbdbdb;
+  --color-gray-200: #a2a2a2;
+  --color-blue: #3888c1;
+  --color-danger: #d23338;
+
+  --font-family: "Nunito", sans-serif;
+
+  --font-md: 18px;
+  --font-xl: 40px;
+
+  --font-bold: 700;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 40px;
+
+  --border-radius-100: 4px;
+
+  --animation-delay-100: 0.3s;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0 100px;
+  font-family: var(--font-family);
+}
+h1 {
+  font-weight: var(--font-bold);
+  text-align: center;
+  padding: var(--space-xl) 0;
+  font-size: var(--font-xl);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-xxl);
+  list-style-type: none;
+  background: var(--color-gray-100);
+  font-size: var(--font-md);
+  transition: var(--animation-delay-100);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul li:nth-child(odd) {
+  background: var(--color-white);
+}
+ul li:hover {
+  background: var(--color-gray-200);
+}
+ul li.checked {
+  background: var(--color-gray-200);
+  color: white;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 6px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-md);
+}
+.close:hover {
+  background-color: var(--color-danger);
+  color: white;
+}
+.header {
+  background-color: var(--color-gray-100);
+  padding: var(--space-lg) var(--space-xxl);
+  color: white;
+  text-align: center;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: var(--space-sm);
+  float: left;
+  font-size: var(--font-md);
+}
+.addBtn {
+  padding: var(--space-sm);
+  width: 25%;
+  background: var(--color-blue);
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: var(--font-md);
+  cursor: pointer;
+  transition: opacity var(--animation-delay-100);
+  border-radius: 0;
+}
+.addBtn:hover {
+  opacity: 0.7;
+}
