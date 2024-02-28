@@ -1,15 +1,15 @@
 const myUL = document.getElementById("myUL");
-const Li = document.getElementsByName('li');
+const Li = document.querySelectorAll('li');
 
 function newElement(){
     const newLi = document.createElement('li');
-    
     const input = document.getElementById("input").value;
-    console.log(input);
 
     newLi.innerHTML = input;
     myUL.appendChild(newLi);
-
-    console.log(Li);
+    input.innerHTML = "";
 }
 
+Li.addEventListener("click", function () {
+    console.log(this.className); // logs the className of my_element
+});
